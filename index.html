@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #yes {
+            position: absolute;
+            top: 30%;
+            left: 30%;
+        }
+
+        #no {
+            position: absolute;
+            top: 30%;
+            left: 40%;
+        }
+
+        .main {
+            height: 600px;
+            width: 600px;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <button id="yes">yes</button>
+        <button id="no">no</button>
+
+    </div>
+    <script>
+        let btn1 = document.getElementById("yes")
+        let btn2 = document.getElementById("no")
+
+        btn2.addEventListener("mouseenter", function () {
+            let stage1 = Math.floor(Math.random() * 400)
+            let stage2 = Math.floor(Math.random() * 400)
+            btn2.style.top = stage1 + "px"
+            btn2.style.left = stage2 + "px"
+
+        })
+    </script>
+</body>
+
+</html>
